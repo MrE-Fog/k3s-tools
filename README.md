@@ -9,6 +9,7 @@ This repo is a clone of Jeff Kight's k3s implementation with ansible for bare-me
 ansible-playbook k3s-site.yml ## install k3s
 ./3-deploy-rancher-on-k3s.sh ## deploys rancher stable on top with helm
 ./k3s-reset.sh ## resets k3s
+./cleanup.sh ## deletes all VMs and files created during the install
 ```
 
 K3S is a certified Lightweight Kubernetes distro from Rancher that is focused on:
