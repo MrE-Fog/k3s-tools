@@ -1,26 +1,27 @@
 ---
 # tasks file for common
 
-- name: add http_proxy to /etc/environment
-  lineinfile:
-    path: /etc/environment
-    regexp: '^http_proxy='
-    line: http_proxy="{{ proxy }}"
-  become: yes
 
-- name: add https_proxy to /etc/environment
-  lineinfile:
-    path: /etc/environment
-    regexp: '^https_proxy='
-    line: https_proxy="{{ proxy }}"
-  become: yes
+#- name: add http_proxy to /etc/environment
+#  lineinfile:
+#    path: /etc/environment
+#    regexp: '^http_proxy='
+#    line: http_proxy="{{ proxy }}"
+#  become: yes
 
-- name: add no_proxy to /etc/environment
-  lineinfile:
-    path: /etc/environment
-    regexp: '^no_proxy='
-    line: no_proxy="{{ no_proxy }}"
-  become: yes
+#- name: add https_proxy to /etc/environment
+#  lineinfile:
+#    path: /etc/environment
+#    regexp: '^https_proxy='
+#    line: https_proxy="{{ proxy }}"
+#  become: yes
+
+#- name: add no_proxy to /etc/environment
+#  lineinfile:
+#    path: /etc/environment
+#    regexp: '^no_proxy='
+#    line: no_proxy="{{ no_proxy }}"
+#  become: yes
 
 - name: add proxy to yum.conf
   ini_file:
