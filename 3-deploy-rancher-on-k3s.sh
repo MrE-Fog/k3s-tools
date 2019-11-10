@@ -48,7 +48,7 @@ echo "##########################################################################
 kubectl -n cattle-system rollout status deploy/rancher
 # to be able to access rancher for HA via load balancing on all nodes (to do HA proxy)
 kubectl delete ing -n cattle-system rancher
-kubectl -f ingress-rancher.yaml -n cattle-system
+kubectl apply -f ingress-rancher.yaml -n cattle-system
 kubectl get nodes
 kubectl get ing -A
 # sleep 5
